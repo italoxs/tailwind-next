@@ -8,12 +8,12 @@ export function FileList() {
   const { files } = useFileInput()
 
   return (
-    <div className="mt-4 space-y-3">
+    <div className="mt-4 space-y-3 ">
       {files.map((file) => {
         return (
           <div
             key={file.name}
-            className="group flex items-start gap-4 rounded-lg border border-zinc-200 dark:border-slate-600 p-4"
+            className="group flex items-start gap-4 rounded-lg border border-zinc-200  dark:border-slate-600 p-4"
           >
             <div className="rounded-full border-4 border-violet-100 bg-violet-200 p-2 text-violt-600 dark:border-cyan-800 dark:bg-cyan-950 dark:text-cyan-300">
               <UploadCloud className="size-4" />

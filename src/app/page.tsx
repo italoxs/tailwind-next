@@ -1,7 +1,10 @@
-import { Mail } from 'lucide-react'
+import { Bold, Italic, Link, ListOrdered, Mail } from 'lucide-react'
 import { SettingsTabs } from './components/SettingsTabs'
 import { InputControl, InputPrefix, InputRoot } from '@/app/components/Input'
 import * as FileInput from '@/app/components/Form/FileInput'
+import { Select } from './components/Form/Select'
+import { SelectItem } from './components/Form/Select/SelectItem'
+import { TextArea } from './components/Textarea'
 
 export default function Home() {
   return (
@@ -120,9 +123,11 @@ export default function Home() {
             >
               Country
             </label>
-            <InputRoot>
-              <InputControl id="country" defaultValue="Brasil" />
-            </InputRoot>
+
+            <Select placeholder="Selecet a country...">
+              <SelectItem value="br" text="Brazil" />
+              <SelectItem value="us" text="United States" />
+            </Select>
           </div>
 
           {/* Timezone */}
@@ -133,9 +138,13 @@ export default function Home() {
             >
               Timezone
             </label>
-            <InputRoot>
-              <InputControl id="timezone" defaultValue="UTC" />
-            </InputRoot>
+            <Select placeholder="Selecet a timezone...">
+              <SelectItem value="brazil" text="America São Paulo (UTC-03:00)" />
+              <SelectItem
+                value="pacific"
+                text="Pacific Standart Time (UTC-08:00)"
+              />
+            </Select>
           </div>
 
           {/* Bio */}
@@ -149,7 +158,65 @@ export default function Home() {
                 Write a short introduction.
               </span>
             </label>
-            <div></div>
+            <div className="spyce-y-3">
+              <div className="grid gap-3 grid-cols-2">
+                <Select placeholder="" defaultValue="normal">
+                  <SelectItem
+                    value="normal"
+                    defaultChecked
+                    text="Normal Text"
+                  />
+                  <SelectItem value="md" text="Markdown" />
+                </Select>
+
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    className="p-2 hover:bg-zinc-100 dark:hover:bg-cyan-950 rounded-md"
+                  >
+                    <Bold
+                      className="h-4 w-4 text-zinc-500 dark:text-cyan-600"
+                      strokeWidth={3}
+                    />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="p-2 hover:bg-zinc-100 dark:hover:bg-cyan-950 rounded-md"
+                  >
+                    <Italic
+                      className="h-4 w-4 text-zinc-500 dark:text-cyan-600"
+                      strokeWidth={3}
+                    />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="p-2 hover:bg-zinc-100 dark:hover:bg-cyan-950 rounded-md"
+                  >
+                    <Link
+                      className="h-4 w-4 text-zinc-500 dark:text-cyan-600"
+                      strokeWidth={3}
+                    />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="p-2 hover:bg-zinc-100 dark:hover:bg-cyan-950 rounded-md"
+                  >
+                    <ListOrdered
+                      className="h-4 w-4 text-zinc-500 dark:text-cyan-600"
+                      strokeWidth={3}
+                    />
+                  </button>
+                </div>
+              </div>
+
+              <TextArea
+                id="bio"
+                defaultValue="I'm a Product Designer based in Merlbourn, Australia. I specialist in UX/UI design, brand strategy, and Webflow development."
+              />
+            </div>
           </div>
 
           {/* Portfolio projects */}
