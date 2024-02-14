@@ -5,6 +5,7 @@ import * as FileInput from '@/app/components/Form/FileInput'
 import { Select } from './components/Form/Select'
 import { SelectItem } from './components/Form/Select/SelectItem'
 import { TextArea } from './components/Textarea'
+import { Button } from './components/Button'
 
 export default function Home() {
   return (
@@ -26,19 +27,12 @@ export default function Home() {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              className="rounded-lg border px-4 py-2 text-sm font-semibold shadown-sm border-zinc-300 text-zinc-700 hover:bg-zinc-50 dark:border-slate-700 dark:text-white dark:hover:bg-cyan-700"
-            >
+            <Button variant="outline" type="button">
               Cancel
-            </button>
-            <button
-              type="submit"
-              form="settings"
-              className="rounded-lg px-4 py-2 text-sm font-semibold shadown-sm bg-slate-600 text-white hover:bg-slate-700 dark:bg-emerald-500 dark:text-white dark:hover:bg-cyan-700"
-            >
+            </Button>
+            <Button variant="primary" type="submit" form="settings">
               Save
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -170,45 +164,30 @@ export default function Home() {
                 </Select>
 
                 <div className="flex items-center gap-1">
-                  <button
-                    type="button"
-                    className="p-2 hover:bg-zinc-100 dark:hover:bg-cyan-950 rounded-md"
-                  >
+                  <Button type="button" variant="ghost">
                     <Bold
                       className="h-4 w-4 text-zinc-500 dark:text-cyan-600"
                       strokeWidth={3}
                     />
-                  </button>
-
-                  <button
-                    type="button"
-                    className="p-2 hover:bg-zinc-100 dark:hover:bg-cyan-950 rounded-md"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <Italic
                       className="h-4 w-4 text-zinc-500 dark:text-cyan-600"
                       strokeWidth={3}
                     />
-                  </button>
-
-                  <button
-                    type="button"
-                    className="p-2 hover:bg-zinc-100 dark:hover:bg-cyan-950 rounded-md"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <Link
                       className="h-4 w-4 text-zinc-500 dark:text-cyan-600"
                       strokeWidth={3}
                     />
-                  </button>
-
-                  <button
-                    type="button"
-                    className="p-2 hover:bg-zinc-100 dark:hover:bg-cyan-950 rounded-md"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <ListOrdered
                       className="h-4 w-4 text-zinc-500 dark:text-cyan-600"
                       strokeWidth={3}
                     />
-                  </button>
+                  </Button>
                 </div>
               </div>
 
@@ -239,18 +218,12 @@ export default function Home() {
 
           {/* Button Cancel/View */}
           <div className="flex items-center justify-end gap-2 pt-5">
-            <button
-              type="button"
-              className="rounded-lg border px-4 py-2 text-sm font-semibold shadown-sm border-zinc-300 text-zinc-700 hover:bg-zinc-50 dark:border-slate-700 dark:text-white dark:hover:bg-cyan-700"
-            >
+            <Button variant="outline" type="button">
               Cancel
-            </button>
-            <button
-              type="submit"
-              className="rounded-lg px-4 py-2 text-sm font-semibold shadown-sm bg-slate-600 text-white hover:bg-slate-700 dark:bg-emerald-500 dark:text-white dark:hover:bg-cyan-700"
-            >
+            </Button>
+            <Button variant="primary" type="submit" form="settings">
               Save
-            </button>
+            </Button>
           </div>
         </form>
       </div>
