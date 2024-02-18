@@ -1,10 +1,10 @@
-// app/providers.jsx
+// // app/providers.jsx
 
-'use client'
+// 'use client'
 
-import { ThemeProvider } from 'next-themes'
-import { ThemeProviderProps } from 'next-themes/dist/types'
+// import { ThemeProvider } from 'next-themes'
+// import { ThemeProviderProps } from 'next-themes/dist/types'
 
-export function Providers({ children }: React.FC<ThemeProviderProps>) {
-  return <ThemeProvider>{children}</ThemeProvider>
-}
+// export function Providers({ children }: React.FC<ThemeProviderProps>) {
+//   return <ThemeProvider>{children}</ThemeProvider>
+// }
